@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    let x = 5;
+</script>
+
+{#if x > 10}
+    <p>{x} is greater than 10</p>
+{:else if 5 > x}
+    <p>{x} is less than 5</p>
+{:else}
+    <p>{x} is between 5 and 10</p>
+{/if}
